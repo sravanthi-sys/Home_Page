@@ -1,0 +1,805 @@
+.Main_div {
+  padding: 0;
+  height: 100svh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image: url("https://i.pinimg.com/564x/95/8b/5a/958b5a0c1e9799570020e370e6e9a4a7.jpg"); */
+  background-color: #074173;
+}
+.header {
+  height: 11svh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerh1 {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.headerh1 img {
+  height: 70px;
+  width: 100px;
+}
+.logoname {
+  font-size: 28px;
+  font-weight: 700;
+}
+.headerh2 {
+  height: 100%;
+  width: 65%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.signupButton {
+  background-color: #4b6382;
+  /* border: 3px solid #6C1201;
+    box-shadow: -3px -3px  #6C1201; */
+  height: 50px;
+  width: 140px;
+  border-radius: 65px;
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  border: none;
+  flex-shrink: 0;
+}
+.signupButton:hover {
+  opacity: 0.8;
+}
+.homeButton,.supportButton,.loginButton {
+  height: 50px;
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+  border: 3px solid #4b6382;
+  /* background-color: #94afc6; */
+  font-size: 21px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.loginButton:hover {
+  opacity: 0.8;
+}
+.body_content {
+  height: 89svh;
+  /* width: 100%; */
+
+  display: flex;
+  align-items: center;
+  z-index: -999;
+}
+.half1 {
+  height: 100%;
+  width: 35%;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.half1 img {
+  height: 90%;
+  width: 100%;
+}
+
+.half2 {
+  height: 100%;
+  width: 65%;
+
+  position: relative;
+}
+/* .body_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+.centerImage {
+  height: 45%;
+  width: 30%;
+  position: absolute;
+  left: 35%;
+  bottom: 28%;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  perspective-origin: 500px;
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.cardFlipping {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+.cardFlipping:hover {
+  transform: rotateY(180deg);
+}
+.front img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.back {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 32px;
+  background-color: white;
+  transform: rotateY(180deg);
+}
+.i1 {
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 28%;
+  /* overflow: hidden; */
+  transition: all 1s;
+  z-index: 9999;
+}
+/* .i1:hover{ 
+  opacity: 0.6;
+} */
+.i1 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 9999;
+}
+.i1::after {
+  content: "Skill Development";
+  text-align: center;
+    width: 138px;
+  position: absolute;
+  right: 0px;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 30%;
+  transition: all 1s;
+  height: 60px;
+  background-color: #F9E8C9;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i1:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  right: 150px;
+}
+.i2 {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4%;
+  right: 28%;
+
+  /* overflow: hidden; */
+  transition: all 1s;
+  z-index: 9999;
+}
+.i2 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.i2::after {
+  content: "Networking";
+  text-align: center;
+  width: 138px;
+  position: absolute;
+  top: 30%;
+  left: 0px;
+  transition: all 1s;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 40px;
+  background-color: #F9E8C9;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i2:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  left: 150px;
+}
+.i3 {
+  height: 140px;
+  width: 140px;
+
+  position: absolute;
+  top: 40%;
+  right: 16%;
+  transition: all 1s;
+  z-index: 9999;
+}
+.i3 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.i3::after {
+  content: " Resume building ";
+  text-align: center;
+  font-size: 13px;
+  width: 138px;
+  position: absolute;
+  
+  left: 0px;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 30%;
+  transition: all 1s;
+  height: 60px;
+  background-color: #F9E8C9;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i3:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  left: 150px;
+}
+.i4 {
+  height: 140px;
+  width: 140px;
+
+  position: absolute;
+  top: 40%;
+  left: 16%;
+  transition: all 1s;
+  z-index: 9999;
+}
+.i4 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.i4::after {
+  content: "Interview preparation";
+  text-align: center;
+  font-size: 13px;
+  width: 138px;
+  position: absolute;
+  right: 0px;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 30%;
+  transition: all 1s;
+  height: 60px;
+  background-color: #F9E8C9;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i4:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  right: 150px;
+}
+.i5 {
+  height: 140px;
+  width: 140px;
+
+  position: absolute;
+  bottom: 4%;
+  left: 28%;
+  transition: all 1s;
+  z-index: 9999;
+}
+.i5 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.i5::after {
+  content: "Company research ";
+  text-align: center;
+  font-size: 13px;
+  height: 138px;
+  width: 138px;
+  position: absolute;
+  right: 0px;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 30%;
+  transition: all 1s;
+  height: 60px;
+  background-color: #F9E8C9;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i5:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  right: 150px;
+}
+.i6 {
+  height: 140px;
+  width: 140px;
+
+  position: absolute;
+  bottom: 4%;
+  right: 28%;
+  transition: all 1s;
+  z-index: 9999;
+}
+.i6 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.i6::after {
+  content: "Job alerts ";
+  text-align: center;
+  width: 138px;
+  position: absolute;
+  left: 0px;
+  z-index: -999;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 30%;
+  transition: all 1s;
+  height: 40px;
+  background-color: #F9E8C9;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(114, 99, 99);
+}
+.i6:hover::after {
+  border-radius: 10px;
+  position: absolute;
+  left: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  .centerImage {
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    bottom: 28%;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+  }
+  .i1 {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 23%;
+  }
+  .i2 {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    right: 23%;
+
+    /* overflow: hidden; */
+    transition: all 1s;
+    z-index: 9999;
+  }
+  .i3 {
+    height: 140px;
+    width: 140px;
+
+    position: absolute;
+    top: 40%;
+    right: 12%;
+  }
+  .i4 {
+    height: 140px;
+    width: 140px;
+
+    position: absolute;
+    top: 40%;
+    left: 12%;
+  }
+  .i5 {
+    height: 140px;
+    width: 140px;
+
+    position: absolute;
+    bottom: 4%;
+    left: 25%;
+  }
+  .i6 {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    bottom: 4%;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .headerh1 {
+    width: 55%;
+  }
+  .headerh2 {
+    width: 45%;
+  }
+  .loginButton {
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .signupButton {
+    height: 50px;
+    width: 120px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .centerImage {
+    height: 28%;
+    width: 33%;
+    position: absolute;
+    left: 33%;
+    bottom: 30%;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+  }
+  .half1 {
+    width: 45%;
+  }
+  .half2 {
+    width: 55%;
+  }
+  .i1 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+  }
+  .i1::after {
+    display: none;
+  }
+  .i2 {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+  }
+  .i2::after {
+    display: none;
+  }
+  .i3 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 45%;
+    right: 2%;
+  }
+  .i3::after {
+    display: none;
+  }
+  .i4 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+  }
+  .i4::after {
+    display: none;
+  }
+  .i5 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: 4%;
+    left: 15%;
+  }
+  .i5::after {
+    display: none;
+  }
+  .i6 {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    bottom: 4%;
+    right: 15%;
+  }
+  .i6::after {
+    display: none;
+  }
+  .half1 {
+    max-width: 400px;
+  }
+   .homeButton,.supportButton{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Main_div {
+    height: 100svh;
+    width: 100%;
+  }
+  .body_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .half1 {
+    height: 30%;
+    width: 100%;
+  }
+
+  .half1 img {
+    height: 100%;
+    width: 60%;
+  }
+  .half2 {
+    height: 70%;
+    width: 100%;
+  }
+  .centerImage {
+    height: 45%;
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    bottom: 28%;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+  }
+  .i1 {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+  }
+  .i1::after {
+    display: none;
+  }
+  .i2 {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 25%;
+  }
+  .i2::after {
+    background-color: none;
+    display: none;
+  }
+  .i3 {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+  }
+  .i3::after {
+    background-color: none;
+    display: none;
+  }
+  .i4 {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .i4::after {
+    background-color: none;
+    display: none;
+  }
+  .i5 {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+  }
+  .i5::after {
+    background-color: none;
+    display: none;
+  }
+  .i6 {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+  }
+  .i6::after {
+    background-color: none;
+    display: none;
+  }
+  .headerh1 {
+    width: 35%;
+  }
+  .headerh2 {
+    width: 65%;
+  }
+  .logoname {
+    display: none;
+  }
+  .loginButton {
+    height: 40px;
+    width: 80px;
+    border-radius: 30px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .signupButton {
+    height: 40px;
+    width: 110px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+ 
+}
+@media screen and (max-width: 500px) {
+  .Main_div {
+    height: 100svh;
+    width: 100%;
+  }
+  .body_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .half1 {
+    height: 30%;
+    width: 100%;
+  }
+
+  .half1 img {
+    height: 100%;
+    width: 60%;
+  }
+  .half2 {
+    height: 70%;
+    width: 100%;
+  }
+  .centerImage {
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    bottom: 28%;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+  }
+  .i1 {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+  }
+  .i1::after {
+    display: none;
+  }
+  .i2 {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 25%;
+  }
+  .i2::after {
+    background-color: none;
+    display: none;
+  }
+  .i3 {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+  }
+  .i3::after {
+    background-color: none;
+    display: none;
+  }
+  .i4 {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .i4::after {
+    background-color: none;
+    display: none;
+  }
+  .i5 {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+  }
+  .i5::after {
+    background-color: none;
+    display: none;
+  }
+  .i6 {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+  }
+  .i6::after {
+    background-color: none;
+    display: none;
+  }
+  .headerh1 {
+    width: 35%;
+  }
+  .headerh2 {
+    width: 65%;
+  }
+  .logoname {
+    display: none;
+  }
+  .loginButton {
+    height: 40px;
+    width: 80px;
+    border-radius: 30px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .signupButton {
+    height: 40px;
+    width: 110px;
+    font-size: 19px;
+    font-weight: 400;
+  }
+}
